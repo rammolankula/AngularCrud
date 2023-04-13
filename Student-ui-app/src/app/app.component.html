@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand text-white" href="#">Students-App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active text-white">
+        <a class="nav-link text-white" href="#" routerLink="add">Register</a>
+      </li>
+      <li class="nav-item text-white">
+        <a class="nav-link text-white" href="#" routerLink="all">ALL</a>
+      </li>
+      <body>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle data-bs-toggle" type="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Studnet Operations
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#" routerLink="add">Register</a></li>
+          <li><a class="dropdown-item" href="#" routerLink="all">ALL</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </body>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
