@@ -1,7 +1,7 @@
 # AngularCrud
 Implementation of Crud By using Java Rest Backend API's
 # Installation Of Angular
-
+# =======================
 #### 1. Download and install NodeJs
 											
 #### goto :Https:nodejs.org/en/download
@@ -50,13 +50,15 @@ Implementation of Crud By using Java Rest Backend API's
 #### -->Under import section add below lines
    
 ####    FormsModule,
-####	HttpClientModule,
+#### HttpClientModule,
 
 #### -->add import lines
 #### import {FormsModule} from '@angular/forms';
 #### import {HttpClientModule} from '@angular/common/http'
 ###  ** Delete Operation **
 ###  ========================
+![Delete Angular](https://user-images.githubusercontent.com/53596726/233992683-c89276e5-8adc-41ce-b6c9-ad6c4d191232.png)
+
 #### 1.service code [Student.service.ts]
 #### Add one method that will make DELETE HTTP call based on ID.
  
@@ -67,6 +69,11 @@ Implementation of Crud By using Java Rest Backend API's
 
 
 #### Response given by this method is like a message
+#### 2.In Student-all.component.ts
+
+#### >Declare one more variable for  display message
+#### message: String;
+#### >Write one methode for delete based on id
 
 ## SOME POINTS
 ## ==========
@@ -105,8 +112,62 @@ Implementation of Crud By using Java Rest Backend API's
 
 #### g. Our Function in TS files are internally JavaScript only. 
 
-#### 2.In Student-all.component.ts
 
-#### >Declare one more variable for  display message
-#### message: String;
-#### >Write one methode for delete based on id
+## Update Operation using Angular
+### =================================
+#### Stage#1 show Edit Page
+
+#### Angular Routing : Angular Application contains multiple components
+####                To move one components to another component(with or without data)
+#### use Routing concept.
+				
+#### URL:[EDIT] button ====>/edit/101
+				
+#### Code Steps
+#### s#1 Define Edit Button in student-all.component.html
+####     and link with (click) event.
+	 
+#### s#2 On click Edit button, it should call editStudent(id) which is
+####     defined in student-all.component.ts
+				
+#### s#3  editStudent(id) function should read as dynamic value
+
+#### S#4 it should make Router.Navigation ie move from current component to another component
+####     ie. student-edit.component.ts
+	 
+#### ex URL :/edit/101
+
+#### S#5 when student-edit.component.ts is loaded  to the method is executed after constructor
+     
+#### Here, read id from URL using
+#### activateedRout-Param[id]
+	 
+#### s#6 By using this id, make servcie call to get one student by id
+
+
+#### s#7 student-servcie.ts is making HTTP git call to get one object data /get/{101}ct
+
+
+#### s#8 returning  student JSON object to component file 
+
+#### s#9 store the data in student object defined in component class
+
+#### s#10 Create one HTML Edit form that makes binding with student object.
+
+#### =========================================
+#### Stage#2 DO Update Operation 
+
+#### s#11 Fill/Modify data at edit form
+
+#### s#12 Link with onsubmit and definr a method in student-edit.component.ts file
+
+#### s#13 Read id and student in TS and make servcie call data update
+
+#### s#14 Make service call data update using id and student object
+
+#### s#15 Service using HTTP PUT method and making n/w call to backend app
+
+#### s#16 It is returning text message back to componentTs
+
+#### S#17 use Router to navigate from edit component to all component
+
