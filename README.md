@@ -182,4 +182,4 @@ Implementation of Crud By using Java Rest Backend API's
 #### S#17 use Router to navigate from edit component to all component
 
 
-## ALL ABOVE POINTS Might be ziczac need to clarify after after code go through
+## ALL ABOVE POINTS Might be zigzac need to clarify after after code go through
