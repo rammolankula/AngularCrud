@@ -44,9 +44,6 @@ Implementation of Crud By using Java Rest Backend API's
 
 #### =========================Level-3========================
 #### Configuration for activating  Forms and Routing 
-![Component  service](https://user-images.githubusercontent.com/53596726/233994715-4cc68f81-34df-4f45-8c77-24061c66d7e7.png)
-
-
 #### -->Open'apps.module.ts' file
 #### -->Under import section add below lines
    
@@ -76,6 +73,20 @@ Implementation of Crud By using Java Rest Backend API's
 #### message: String;
 #### >Write one methode for delete based on id
 
+### Student Register Process
+### =========================
+
+### 1. Add one method at service for post method cell
+###   student.service.ts
+   
+###     createStudent(student: Student):Observable<any>{
+###    return this.http.post(`${this.basePath}/save`,student,{responseType:'text'});
+###  }
+
+
+### 2. create one register page at UI(HTML) and link form with submit event
+###   and link every input with one model class object variable.
+   
 ## SOME POINTS
 ## ==========
 #### a.Link one on click event to one TS methode
@@ -114,10 +125,8 @@ Implementation of Crud By using Java Rest Backend API's
 #### g. Our Function in TS files are internally JavaScript only. 
 
 
-## Update Operation using Angular
+## Update Operation using Angular Edit Page
 ### =================================
-#### Stage#1 show Edit Page
-
 #### Angular Routing : Angular Application contains multiple components
 ####                To move one components to another component(with or without data)
 #### use Routing concept.
@@ -155,8 +164,8 @@ Implementation of Crud By using Java Rest Backend API's
 
 #### s#10 Create one HTML Edit form that makes binding with student object.
 
-#### =========================================
-#### Stage#2 DO Update Operation 
+### Stage#2 DO Update Operation 
+### ================================
 
 #### s#11 Fill/Modify data at edit form
 
@@ -172,3 +181,5 @@ Implementation of Crud By using Java Rest Backend API's
 
 #### S#17 use Router to navigate from edit component to all component
 
+
+## ALL ABOVE POINTS Might be ziczac need to clarify after after code go through
