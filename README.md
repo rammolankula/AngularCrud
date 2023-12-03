@@ -98,25 +98,25 @@
 ## SOME POINTS
 ## ==========
 <pre>
-&#8594; a.Link one on click event to one TS methode
+&#8594; 1).Link one on click event to one TS methode
 &#8594; <div (click)="functionname()">___</div>
 &#8594; functionname(){....in TS file..}
-&#8594; b. link same click event for submit operation
+&#8594; 2). link same click event for submit operation
 &#8594; <form (ngSubmit)="onSubmitFun()">..</form>
 &#8594; onSubmitFun(){..in TS file}
-&#8594; c.use ngModel for data binding in two ways(UI-TS and TS-UI)
+&#8594; 3).use ngModel for data binding in two ways(UI-TS and TS-UI)
 &#8594; <input..[(ngModel)]="objectName.variable"....>
-&#8594; d. HttpClient class is used to make HTTP calls like DELETE,POST,GET..etc
+&#8594; 4). HttpClient class is used to make HTTP calls like DELETE,POST,GET..etc
 &#8594; delete(url,params)
 &#8594;  post(url,body,params)
 &#8594;  get(url)
-&#8594; e. Observable<T> it is like memory that holds results given by HTTP calls
+&#8594; 5). Observable<T> it is like memory that holds results given by HTTP calls
 &#8594;     this data can read at any component (such process is called as subscribe - read data).
 &#8594; 	[it behaves like PUB-SUB models]
-&#8594;  f. In angular object means JSON and (List/set)Collection means Array.
+&#8594;  6). In angular object means JSON and (List/set)Collection means Array.
 &#8594;  Here we can  create even object without class.
 &#8594;  var v= {"sid":10} : //valid
-&#8594;  g. Our Function in TS files are internally JavaScript only. 
+&#8594;  7). Our Function in TS files are internally JavaScript only. 
 </pre>
 ## Update Operation using Angular Edit Page
 ### =================================
