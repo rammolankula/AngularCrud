@@ -1,130 +1,131 @@
-# AngularCrud
-Implementation of Crud By using Java Rest Backend API's
+# AngularCrud 
+<pre>
+&#8594; Implementation of Crud By using Java Rest Backend API's
+</pre>
 # Installation Of Angular
 # =======================
-#### 1. Download and install NodeJs
+&#8594; 1. Download and install NodeJs
 											
-#### goto :Https:nodejs.org/en/download
+&#8594; goto :Https:nodejs.org/en/download
 											
-#### click on: windows installer (.msi) 64 bit
-#### Double click>next>next>finish
-#### 2. cross verify installation of nodejs
-#### cmd> node -v
-#### cmd> npm -v
-
-#### 3. install Angular CLI
-#### cmd> npm install -g @angular/cli
-
-#### 4 Angular cross check
-#### cmd> ng version
-
-#### 5 Downlaod and install visual studio code
-#### Link: https://code.visualstudio.com
-#### click & download
+&#8594; click on: windows installer (.msi) 64 bit
+&#8594; Double click>next>next>finish
+&#8594; 2. cross verify installation of nodejs
+&#8594; cmd> node -v
+&#8594; cmd> npm -v
+&#8594; 3. install Angular CLI
+&#8594; cmd> npm install -g @angular/cli
+&#8594; 4 Angular cross check
+&#8594; cmd> ng version
+&#8594; 5 Downlaod and install visual studio code
+&#8594; Link: https://code.visualstudio.com
+&#8594; click & download
 
 #### creating project and generating required files:
 
-#### open  --->Terminal>open terminal (ctrl+`)
+&#8594; open  --->Terminal>open terminal (ctrl+`)
 
-#### create new Project: (on terminal execute below commands)
+&#8594; create new Project: (on terminal execute below commands)
 
-#### -->ng new Student-ui-app
-#### -->press y for routing option
-#### -->press enter at css option
+&#8594; ng new Student-ui-app
+&#8594; press y for routing option
+&#8594; press enter at css option
 
 #### Generate files in order
-#### *)Model(class)
-#### -->ng g class student
-#### *)service (HTTP calls)
-#### -->ng g s student
+&#8594; Model(class)
+&#8594; ng g class student
+&#8594; service (HTTP calls)
+&#8594; -->ng g s student
 #### *)component
-#### --> ng g c student-all [For display all and delete view]
-#### --> ng g c student-create [Student Register page view]
-#### --> ng g c student-edit [Student edit page view]
+&#8594; ng g c student-all [For display all and delete view]
+&#8594; ng g c student-create [Student Register page view]
+&#8594; ng g c student-edit [Student edit page view]
 
 #### =========================Level-3========================
-#### Configuration for activating  Forms and Routing 
-#### -->Open'apps.module.ts' file
-#### -->Under import section add below lines
+&#8594; Configuration for activating  Forms and Routing 
+&#8594; Open'apps.module.ts' file
+&#8594; Under import section add below lines
    
 ####    FormsModule,
-#### HttpClientModule,
+&#8594; HttpClientModule,
 
 #### -->add import lines
-#### import {FormsModule} from '@angular/forms';
-#### import {HttpClientModule} from '@angular/common/http'
-###  ** Delete Operation **
+&#8594; import {FormsModule} from '@angular/forms';
+&#8594; import {HttpClientModule} from '@angular/common/http'
+&#8594;  ** Delete Operation **
 ###  ========================
 ![Delete Angular](https://user-images.githubusercontent.com/53596726/233992683-c89276e5-8adc-41ce-b6c9-ad6c4d191232.png)
-
-#### 1.service code [Student.service.ts]
-#### Add one method that will make DELETE HTTP call based on ID.
+<pre>
+&#8594; 1.service code [Student.service.ts]
+&#8594; Add one method that will make DELETE HTTP call based on ID.
  
  
-#### deleteOnStudent(id : number): Observable<any>{
-####    return this.http.delete(`${this.basePath}/remove/${id}`,{responseType : `text`});
-#### }
+&#8594; deleteOnStudent(id : number): Observable<any>{
+&#8594;    return this.http.delete(`${this.basePath}/remove/${id}`,{responseType : `text`});
+&#8594; }
 
 
-#### Response given by this method is like a message
-#### 2.In Student-all.component.ts
+&#8594; Response given by this method is like a message
+&#8594; 2.In Student-all.component.ts
 
-#### >Declare one more variable for  display message
-#### message: String;
-#### >Write one methode for delete based on id
-
+&#8594; >Declare one more variable for  display message
+&#8594; message: String;
+&#8594; >Write one methode for delete based on id
+</pre>
+<pre></pre>
 ### Student Register Process
 ### =========================
-
-### 1. Add one method at service for post method cell
-###   student.service.ts
+<pre>
+&#8594; 1. Add one method at service for post method cell
+&#8594;   student.service.ts
    
-###     createStudent(student: Student):Observable<any>{
-###    return this.http.post(`${this.basePath}/save`,student,{responseType:'text'});
-###  }
+&#8594;     createStudent(student: Student):Observable<any>{
+&#8594;    return this.http.post(`${this.basePath}/save`,student,{responseType:'text'});
+&#8594;  }
 
 
-### 2. create one register page at UI(HTML) and link form with submit event
-###   and link every input with one model class object variable.
-   
+&#8594; 2. create one register page at UI(HTML) and link form with submit event
+&#8594;   and link every input with one model class object variable.
+</pre>
 ## SOME POINTS
 ## ==========
-#### a.Link one on click event to one TS methode
+<pre>
+&#8594; a.Link one on click event to one TS methode
 
-#### <div (click)="functionname()">___</div>
+&#8594; <div (click)="functionname()">___</div>
 
-#### functionname(){....in TS file..}
+&#8594; functionname(){....in TS file..}
 
-#### b. link same click event for submit operation
+&#8594; b. link same click event for submit operation
 
-#### <form (ngSubmit)="onSubmitFun()">..</form>
-#### onSubmitFun(){..in TS file}
+&#8594; <form (ngSubmit)="onSubmitFun()">..</form>
+&#8594; onSubmitFun(){..in TS file}
 
-#### c.use ngModel for data binding in two ways(UI-TS and TS-UI)
+&#8594; c.use ngModel for data binding in two ways(UI-TS and TS-UI)
 
-#### <input..[(ngModel)]="objectName.variable"....>
+&#8594; <input..[(ngModel)]="objectName.variable"....>
 
 
-#### d. HttpClient class is used to make HTTP calls like DELETE,POST,GET..etc
-#### delete(url,params)
-####  post(url,body,params)
-####   get(url)
+&#8594; d. HttpClient class is used to make HTTP calls like DELETE,POST,GET..etc
+&#8594; delete(url,params)
+&#8594;  post(url,body,params)
+&#8594;   get(url)
    
-#### e. Observable<T> it is like memory that holds results given by HTTP calls
-####     this data can read at any component (such process is called as subscribe - read data).
+&#8594; e. Observable<T> it is like memory that holds results given by HTTP calls
+&#8594;     this data can read at any component (such process is called as subscribe - read data).
 	
-####	[it behaves like PUB-SUB models]
+&#8594; 	[it behaves like PUB-SUB models]
 	
-#### f. In angular object means JSON and (List/set)Collection means Array.
+&#8594;  f. In angular object means JSON and (List/set)Collection means Array.
 
-#### Here we can  create even object without class.
+&#8594;  Here we can  create even object without class.
 
-#### var v= {"sid":10} : //valid
-
-
-#### g. Our Function in TS files are internally JavaScript only. 
+&#8594;  var v= {"sid":10} : //valid
 
 
+&#8594;  g. Our Function in TS files are internally JavaScript only. 
+
+</pre>
 ## Update Operation using Angular Edit Page
 ### =================================
 #### Angular Routing : Angular Application contains multiple components
