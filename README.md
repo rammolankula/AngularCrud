@@ -120,59 +120,58 @@
 </pre>
 ## Update Operation using Angular Edit Page
 ### =================================
-#### Angular Routing : Angular Application contains multiple components
-####                To move one components to another component(with or without data)
-#### use Routing concept.
+&#8594; Angular Routing : Angular Application contains multiple components
+&#8594; To move one components to another component(with or without data)
+&#8594; use Routing concept.
 				
-#### URL:[EDIT] button ====>/edit/101
+&#8594; URL:[EDIT] button ====>/edit/101
 				
 #### Code Steps
-#### s#1 Define Edit Button in student-all.component.html
-####     and link with (click) event.
+<pre>
+&#8594; s#1 Define Edit Button in student-all.component.html
+&#8594;     and link with (click) event.
 	 
-#### s#2 On click Edit button, it should call editStudent(id) which is
-####     defined in student-all.component.ts
+&#8594; s#2 On click Edit button, it should call editStudent(id) which is
+&#8594;     defined in student-all.component.ts
 				
-#### s#3  editStudent(id) function should read as dynamic value
+&#8594; s#3  editStudent(id) function should read as dynamic value
 
-#### S#4 it should make Router.Navigation ie move from current component to another component
-####     ie. student-edit.component.ts
+&#8594; S#4 it should make Router.Navigation ie move from current component to another component
+&#8594;     ie. student-edit.component.ts
 	 
-#### ex URL :/edit/101
+&#8594; ex URL :/edit/101
 
-#### S#5 when student-edit.component.ts is loaded  to the method is executed after constructor
+&#8594; S#5 when student-edit.component.ts is loaded  to the method is executed after constructor
      
-#### Here, read id from URL using
-#### activateedRout-Param[id]
+&#8594; Here, read id from URL using
+&#8594; activateedRout-Param[id]
 	 
-#### s#6 By using this id, make servcie call to get one student by id
+&#8594; s#6 By using this id, make servcie call to get one student by id
 
 
-#### s#7 student-servcie.ts is making HTTP git call to get one object data /get/{101}ct
+&#8594; s#7 student-servcie.ts is making HTTP git call to get one object data /get/{101}ct
 
 
-#### s#8 returning  student JSON object to component file 
+&#8594; s#8 returning  student JSON object to component file 
 
-#### s#9 store the data in student object defined in component class
+&#8594; s#9 store the data in student object defined in component class
 
-#### s#10 Create one HTML Edit form that makes binding with student object.
-
+&#8594; s#10 Create one HTML Edit form that makes binding with student object.
+</pre>
 ### Stage#2 DO Update Operation 
 ### ================================
+<pre>
+&#8594; s#11 Fill/Modify data at edit form
 
-#### s#11 Fill/Modify data at edit form
+&#8594; s#12 Link with onsubmit and definr a method in student-edit.component.ts file
 
-#### s#12 Link with onsubmit and definr a method in student-edit.component.ts file
+&#8594; s#13 Read id and student in TS and make servcie call data update
 
-#### s#13 Read id and student in TS and make servcie call data update
+&#8594; s#14 Make service call data update using id and student object
 
-#### s#14 Make service call data update using id and student object
+&#8594; s#15 Service using HTTP PUT method and making n/w call to backend app
 
-#### s#15 Service using HTTP PUT method and making n/w call to backend app
+&#8594; s#16 It is returning text message back to componentTs
 
-#### s#16 It is returning text message back to componentTs
-
-#### S#17 use Router to navigate from edit component to all component
-
-
-## ALL ABOVE POINTS Might be zigzac need to clarify while code go through
+&#8594; S#17 use Router to navigate from edit component to all component
+</pre>
