@@ -4,6 +4,7 @@
 </pre>
 # Installation Of Angular
 # =======================
+<pre>
 &#8594; 1. Download and install NodeJs
 											
 &#8594; goto :Https:nodejs.org/en/download
@@ -20,9 +21,9 @@
 &#8594; 5 Downlaod and install visual studio code
 &#8594; Link: https://code.visualstudio.com
 &#8594; click & download
-
+</pre>
 #### creating project and generating required files:
-
+<pre
 &#8594; open  --->Terminal>open terminal (ctrl+`)
 
 &#8594; create new Project: (on terminal execute below commands)
@@ -30,29 +31,36 @@
 &#8594; ng new Student-ui-app
 &#8594; press y for routing option
 &#8594; press enter at css option
-
+</pre>
 #### Generate files in order
+<pre>
 &#8594; Model(class)
 &#8594; ng g class student
 &#8594; service (HTTP calls)
 &#8594; -->ng g s student
+</pre>
 #### *)component
+<pre>
 &#8594; ng g c student-all [For display all and delete view]
 &#8594; ng g c student-create [Student Register page view]
 &#8594; ng g c student-edit [Student edit page view]
-
+</pre>
 #### =========================Level-3========================
+<pre>
 &#8594; Configuration for activating  Forms and Routing 
 &#8594; Open'apps.module.ts' file
 &#8594; Under import section add below lines
-   
+</pre>
 ####    FormsModule,
+<pre>
 &#8594; HttpClientModule,
-
+</pre>
 #### -->add import lines
+<pre>
 &#8594; import {FormsModule} from '@angular/forms';
 &#8594; import {HttpClientModule} from '@angular/common/http'
-&#8594;  ** Delete Operation **
+</pre>
+#### ** Delete Operation **
 ###  ========================
 ![Delete Angular](https://user-images.githubusercontent.com/53596726/233992683-c89276e5-8adc-41ce-b6c9-ad6c4d191232.png)
 <pre>
